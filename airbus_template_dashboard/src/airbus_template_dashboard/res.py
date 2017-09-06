@@ -32,7 +32,7 @@ from python_qt_binding import loadUi
 # Constante(s) and Variable(s) declaration
 ########################################
 
-DIR_TEMPLATEDASHBOARD_RESOURCES = os.path.join(get_pkg_dir('template_dashboard'),'resources')
+DIR_TEMPLATEDASHBOARD_RESOURCES = os.path.join(get_pkg_dir('airbus_template_dashboard'),'resources')
 DIR_TEMPLATEDASHBOARD_IMAGES = DIR_TEMPLATEDASHBOARD_RESOURCES+'/images'
 DIR_TEMPLATEDASHBOARD_LAYOUTS = DIR_TEMPLATEDASHBOARD_RESOURCES+'/layouts'
 DIR_TEMPLATEDASHBOARD_VALUES = DIR_TEMPLATEDASHBOARD_RESOURCES+'/values'

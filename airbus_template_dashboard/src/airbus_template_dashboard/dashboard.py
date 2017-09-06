@@ -21,10 +21,10 @@ from python_qt_binding.QtGui import *
 from python_qt_binding.QtCore import *
 from python_qt_binding import loadUi
 
-from pyqt_agi_extend.QtAgiCore import QAgiSubscriber
-from cobot_gui import dashboard
+from airbus_pyqt_extend.QtAgiCore import QAgiSubscriber
+from airbus_cobot_gui import dashboard
 
-from template_dashboard.res import R
+from airbus_template_dashboard.res import R
 
 class TemplatePopup(dashboard.DashboardPopup):
     
@@ -82,7 +82,7 @@ class TemplateDashboard(dashboard.Dashboard):
         """ Load and sets your GUI components
         @param param: C{Parameters}
         
-        onCreate set the parameters from the dashboard_descriptor.xml (params element) from the cobot_gui config ($MY_COBOT_GUI.conf)
+        onCreate set the parameters from the dashboard_descriptor.xml (params element) from the airbus_cobot_gui config ($MY_COBOT_GUI.conf)
         
         Example:
         my_param = param.getParam($MY_PARAM_NAME, $MY_DEFAULT_VALUE)
@@ -115,7 +115,7 @@ class TemplateDashboard(dashboard.Dashboard):
         You can write rules when the control mode changes.
         
         Example:
-        NB: import needed (from cobot_gui import ControlMode)
+        NB: import needed (from airbus_cobot_gui import ControlMode)
         
         if mode == ControlMode.AUTOMATIC:
             # Do somethings
@@ -148,20 +148,20 @@ class TemplateDashboard(dashboard.Dashboard):
         """
     
     def onDestroy(self):
-        """ This method is called when cobot_gui closes.
+        """ This method is called when airbus_cobot_gui closes.
         You can free memory and disconnects topics
         """
     
 if __name__ == "__main__":
     
     import sys
-    from cobot_gui import dashboard
+    from airbus_cobot_gui import dashboard
      
-    rospy.init_node("template_dashboard_node")
+    rospy.init_node("airbus_template_dashboard_node")
      
     a = QApplication(sys.argv)
      
-    window = dashboard.getStandAloneInstance("template_dashboard", TemplateDashboard, "en")
+    window = dashboard.getStandAloneInstance("airbus_template_dashboard", TemplateDashboard, "en")
     window.setWindowTitle("TemplateDashboard")
     window.show()
     a.exec_()

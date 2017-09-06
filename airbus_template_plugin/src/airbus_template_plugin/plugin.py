@@ -22,9 +22,9 @@ from python_qt_binding.QtGui import *
 from python_qt_binding.QtCore import *
 from python_qt_binding import loadUi
 
-from cobot_gui import plugin, ControlMode, EmergencyStopState
+from airbus_cobot_gui import plugin, ControlMode, EmergencyStopState
 
-from template_plugin.res import R
+from airbus_template_plugin.res import R
 
 class TemplatePlugin(plugin.Plugin):
     
@@ -38,7 +38,7 @@ class TemplatePlugin(plugin.Plugin):
         """ Load and sets your GUI components and variables declaration.
         @param param: C{Parameters}
         
-        onCreate set the parameters from the plugin_descriptor.xml (params element) from the cobot_gui config ($MY_COBOT_GUI.conf)
+        onCreate set the parameters from the plugin_descriptor.xml (params element) from the airbus_cobot_gui config ($MY_COBOT_GUI.conf)
         
         Example:
         # Parameters provider
@@ -92,7 +92,7 @@ class TemplatePlugin(plugin.Plugin):
         You can write rules when the control mode changes.
         
         Example:
-        NB: import needed (from cobot_gui import ControlMode)
+        NB: import needed (from airbus_cobot_gui import ControlMode)
         
         if mode == ControlMode.AUTOMATIC:
             # Do somethings
@@ -107,7 +107,7 @@ class TemplatePlugin(plugin.Plugin):
         You can define different behaviors according to the type of user.
         
         Example:
-        NB: import needed (from cobot_gui import UserPrivilege)
+        NB: import needed (from airbus_cobot_gui import UserPrivilege)
         
         if user.getUserPrivilege() == UserPrivilege.DEVELOPER:
             # Do some rules
@@ -133,7 +133,7 @@ class TemplatePlugin(plugin.Plugin):
             self.onResume()
     
     def onDestroy(self):
-        """ This method is called when cobot_gui closes.
+        """ This method is called when airbus_cobot_gui closes.
         You can free memory and disconnects topics
         """
         # Default exit routine :
@@ -144,12 +144,12 @@ if __name__ == "__main__":
     import sys
     import signal
     
-    rospy.init_node("template_plugin_node")
+    rospy.init_node("airbus_template_plugin_node")
     
     a = QApplication(sys.argv)
     signal.signal(signal.SIGINT, signal.SIG_DFL)
     
-    window = plugin.getStandAloneInstance("template_plugin", TemplatePlugin, "en")
+    window = plugin.getStandAloneInstance("airbus_template_plugin", TemplatePlugin, "en")
     window.setWindowTitle("TemplatePlugin")
     window.show()
     
