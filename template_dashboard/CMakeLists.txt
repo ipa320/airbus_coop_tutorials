@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 2.8.3)
 project(template_dashboard)
 
 find_package(catkin REQUIRED COMPONENTS
-  cobot_gui
+  airbus_cobot_gui
   rospy
-  pyqt_agi_extend
+  airbus_pyqt_extend
 )
 catkin_python_setup()
 
