@@ -1,9 +1,9 @@
-<?xml version='1.0' encoding='utf8'?>
+<?xml version="1.0"?>
 <package>
-  <name>template_dashboard</name>
+  <name>airbus_template_plugin</name>
   <version>0.0.1</version>
-  <description>The dashboard template package</description>
-
+  <description>The airbus_template_plugin package.</description>
+  
   <license>Apache 2.0</license>
 
   <maintainer email="led@ipa.fhg.de">Ludovic Delval</maintainer>
@@ -17,5 +17,5 @@
   <run_depend>airbus_cobot_gui</run_depend>
   <run_depend>airbus_pyqt_extend</run_depend>
   <run_depend>rospy</run_depend>
-
+  
 </package>

@@ -24,7 +24,7 @@ from python_qt_binding import loadUi
 
 from airbus_cobot_gui import plugin, ControlMode, EmergencyStopState
 
-from template_plugin.res import R
+from airbus_template_plugin.res import R
 
 class TemplatePlugin(plugin.Plugin):
     
@@ -144,12 +144,12 @@ if __name__ == "__main__":
     import sys
     import signal
     
-    rospy.init_node("template_plugin_node")
+    rospy.init_node("airbus_template_plugin_node")
     
     a = QApplication(sys.argv)
     signal.signal(signal.SIGINT, signal.SIG_DFL)
     
-    window = plugin.getStandAloneInstance("template_plugin", TemplatePlugin, "en")
+    window = plugin.getStandAloneInstance("airbus_template_plugin", TemplatePlugin, "en")
     window.setWindowTitle("TemplatePlugin")
     window.show()
     

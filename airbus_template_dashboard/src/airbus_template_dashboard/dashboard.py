@@ -24,7 +24,7 @@ from python_qt_binding import loadUi
 from airbus_pyqt_extend.QtAgiCore import QAgiSubscriber
 from airbus_cobot_gui import dashboard
 
-from template_dashboard.res import R
+from airbus_template_dashboard.res import R
 
 class TemplatePopup(dashboard.DashboardPopup):
     
@@ -157,11 +157,11 @@ if __name__ == "__main__":
     import sys
     from airbus_cobot_gui import dashboard
      
-    rospy.init_node("template_dashboard_node")
+    rospy.init_node("airbus_template_dashboard_node")
      
     a = QApplication(sys.argv)
      
-    window = dashboard.getStandAloneInstance("template_dashboard", TemplateDashboard, "en")
+    window = dashboard.getStandAloneInstance("airbus_template_dashboard", TemplateDashboard, "en")
     window.setWindowTitle("TemplateDashboard")
     window.show()
     a.exec_()

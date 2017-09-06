@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf8'?>
 <plugin>
-  <import module="template_dashboard.dashboard" class="TemplateDashboard"/>
+  <import module="airbus_template_dashboard.dashboard" class="TemplateDashboard"/>
   <description>A Python template for displaying a dashboard into airbus_cobot_gui.</description>
   <version>0.0.1</version>
   <setup>

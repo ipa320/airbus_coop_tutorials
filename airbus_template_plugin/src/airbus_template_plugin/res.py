@@ -32,7 +32,7 @@ from python_qt_binding import loadUi
 # Constante(s) and Variable(s) declaration
 ########################################
 
-DIR_TemplatePLUGIN_RESOURCES = os.path.join(get_pkg_dir('template_plugin'),'resources')
+DIR_TemplatePLUGIN_RESOURCES = os.path.join(get_pkg_dir('airbus_template_plugin'),'resources')
 DIR_TemplatePLUGIN_IMAGES = DIR_TemplatePLUGIN_RESOURCES+'/images'
 DIR_TemplatePLUGIN_VALUES = DIR_TemplatePLUGIN_RESOURCES+'/values'
 DIR_TemplatePLUGIN_LAYOUTS = DIR_TemplatePLUGIN_RESOURCES+'/layouts'
