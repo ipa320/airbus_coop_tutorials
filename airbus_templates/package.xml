@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf8'?>
+<package>
+  <name>airbus_templates</name>
+  <version>0.0.1</version>
+  <description>The templates package</description>
+
+  <license>Apache 2.0</license>
+
+  <maintainer email="nhg@ipa.fhg.de">Nadia Hammoudeh Garcia</maintainer>
+  <author email="nhg@ipa.fhg.de">Nadia Hammoudeh Garcia</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>airbus_cobot_gui</build_depend>
+  <build_depend>rospy</build_depend>
+
+  <run_depend>airbus_cobot_gui</run_depend>
+  <run_depend>airbus_plugin_log_manager</run_depend>
+  <run_depend>airbus_plugin_node_manager</run_depend>
+  <run_depend>airbus_plugin_rqt</run_depend>
+  <run_depend>airbus_plugin_rviz</run_depend>
+  <run_depend>airbus_template_plugin</run_depend>
+  <run_depend>airbus_template_dashboard</run_depend>
+  <run_depend>rospy</run_depend>
+
+</package>

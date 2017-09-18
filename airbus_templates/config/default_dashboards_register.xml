@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf8'?>
+<dashboards-register>
+	<dashboard label="Template" package="airbus_template_dashboard" />
+</dashboards-register>
